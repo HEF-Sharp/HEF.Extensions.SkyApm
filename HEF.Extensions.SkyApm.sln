@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HEF.Extensions.SkyApm.Diagnostics.AspNetCore", "src\HEF.Extensions.SkyApm.Diagnostics.AspNetCore\HEF.Extensions.SkyApm.Diagnostics.AspNetCore.csproj", "{DC953662-0914-4674-B0D6-216B9784A691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HEF.Extensions.SkyApm.Diagnostics.AspNetCore", "src\HEF.Extensions.SkyApm.Diagnostics.AspNetCore\HEF.Extensions.SkyApm.Diagnostics.AspNetCore.csproj", "{DC953662-0914-4674-B0D6-216B9784A691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HEF.Extensions.SkyApm.Diagnostics.MySqlClient", "src\HEF.Extensions.SkyApm.Diagnostics.MySqlClient\HEF.Extensions.SkyApm.Diagnostics.MySqlClient.csproj", "{B7AEF756-AFBD-4D1B-82D9-DA6DBA4A0993}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DC953662-0914-4674-B0D6-216B9784A691}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC953662-0914-4674-B0D6-216B9784A691}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC953662-0914-4674-B0D6-216B9784A691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AEF756-AFBD-4D1B-82D9-DA6DBA4A0993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AEF756-AFBD-4D1B-82D9-DA6DBA4A0993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AEF756-AFBD-4D1B-82D9-DA6DBA4A0993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AEF756-AFBD-4D1B-82D9-DA6DBA4A0993}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
