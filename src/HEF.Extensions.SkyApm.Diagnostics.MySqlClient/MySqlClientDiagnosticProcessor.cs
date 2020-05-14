@@ -35,7 +35,7 @@ namespace SkyApm.Diagnostics.MySqlClient
                 firstSqlCommand.Connection.DataSource);
 
             context.Span.SpanLayer = Tracing.Segments.SpanLayer.DB;
-            context.Span.Component = Components.MYSQLCLIENT;
+            context.Span.Component = Common.Components.SQLCLIENT;
             context.Span.AddTag(Common.Tags.DB_TYPE, "MySql");
             context.Span.AddTag(Common.Tags.DB_INSTANCE, firstSqlCommand.Connection.Database);
             context.Span.AddTag(Common.Tags.DB_STATEMENT, string.Join(Environment.NewLine, sqlCommands.Select(c => c.CommandText)));
