@@ -1,4 +1,5 @@
 ﻿using MySqlConnector.Diagnostics;
+using SkyApm.Config;
 using SkyApm.Tracing;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,14 @@ namespace SkyApm.Diagnostics.MySqlClient
     {
         private readonly ITracingContext _tracingContext;
         private readonly IExitSegmentContextAccessor _contextAccessor;
+        private readonly TracingConfig _tracingConfig;
 
         public MySqlClientTracingDiagnosticProcessor(ITracingContext tracingContext,
-            IExitSegmentContextAccessor contextAccessor)
+            IExitSegmentContextAccessor contextAccessor, IConfigAccessor configAccessor)
         {
             _tracingContext = tracingContext;
             _contextAccessor = contextAccessor;
+            _tracingConfig = configAccessor.Get<TracingConfig>();
         }
 
         public string ListenerName { get; } = MySqlClientDiagnosticStrings.DiagnosticListenerName;
@@ -57,7 +60,7 @@ namespace SkyApm.Diagnostics.MySqlClient
             var context = _contextAccessor.Context;
             if (context != null)
             {
-                context.Span.ErrorOccurred(ex);
+                context.Span.ErrorOccurred(ex, _tracingConfig);
                 _tracingContext.Release(context);
             }
         }
